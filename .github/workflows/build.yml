@@ -40,6 +40,11 @@ jobs:
       - name: Execute notebook
         run: jupyter nbconvert --execute LA_County_Triggers.ipynb
       
+      - name: Update README.md
+        run: |-
+          timestamp=$(date -u)
+          printf "# COVID-19 data from LA County\n![image](plots/graph.png)\nLast Updated: ${timestamp}" > README.md
+      
       - name: Commit and push if it changed
         run: |-
           git config user.name "Automated"
