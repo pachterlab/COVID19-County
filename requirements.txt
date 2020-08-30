@@ -7,4 +7,3 @@ jupyter-console==5.2.0
 jupyter-core==4.6.3
 nbconvert==5.6.1
 ipykernel<5.0.0
-ipython<7.0.0
