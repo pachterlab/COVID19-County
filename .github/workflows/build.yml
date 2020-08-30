@@ -33,14 +33,9 @@ jobs:
           # notebooks to run
           notebooks: "LA_County_Triggers.ipynb"
       
-
       - name: Commit and push if it changed
         run: |-
-          git config user.name "Automated"
-          git config user.email "actions@users.noreply.github.com"
-          echo "testing"
-          git --no-pager diff origin plots/graph.png
-          git add plots/graph.png
-          timestamp=$(date -u)
-          git commit -m "Latest data: ${timestamp}" || exit 0
+          git config --global user.email "graph-bot@example.com"
+          git config --global user.name "GRAPH-bot"
+          git diff --quiet || (git add plots/graph.png && git commit -m "Updated graph")
           git push
