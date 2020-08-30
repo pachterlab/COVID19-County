@@ -1,9 +1,10 @@
 pandas==1.0.3
 numpy==1.18.4
 matplotlib==3.2.1
+ipykernel==5.3.4
+ipython==7.14.0
 jupyter==1.0.0	
 jupyter-client==5.3.5	
 jupyter-console==5.2.0	
 jupyter-core==4.6.3
 nbconvert==5.6.1
-ipykernel<5.0.0
