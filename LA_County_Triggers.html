@@ -13125,23 +13125,19 @@ div#notebook {
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Requirement already satisfied: matplotlib in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (3.2.1)
-Requirement already satisfied: cycler&gt;=0.10 in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (from matplotlib) (0.10.0)
-Requirement already satisfied: kiwisolver&gt;=1.0.1 in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (from matplotlib) (1.2.0)
 Requirement already satisfied: python-dateutil&gt;=2.1 in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (from matplotlib) (2.8.1)
 Requirement already satisfied: numpy&gt;=1.11 in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (from matplotlib) (1.18.4)
+Requirement already satisfied: cycler&gt;=0.10 in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (from matplotlib) (0.10.0)
 Requirement already satisfied: pyparsing!=2.0.4,!=2.1.2,!=2.1.6,&gt;=2.0.1 in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (from matplotlib) (2.4.7)
-Requirement already satisfied: six in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (from cycler&gt;=0.10-&gt;matplotlib) (1.15.0)
+Requirement already satisfied: kiwisolver&gt;=1.0.1 in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (from matplotlib) (1.2.0)
+Requirement already satisfied: six&gt;=1.5 in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (from python-dateutil&gt;=2.1-&gt;matplotlib) (1.15.0)
 Requirement already satisfied: numpy in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (1.18.4)
-Collecting scipy
-  Downloading scipy-1.5.2-cp38-cp38-manylinux1_x86_64.whl (25.7 MB)
-     |████████████████████████████████| 25.7 MB 7.3 MB/s 
+Requirement already satisfied: scipy in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (1.5.2)
 Requirement already satisfied: numpy&gt;=1.14.5 in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (from scipy) (1.18.4)
-Installing collected packages: scipy
-Successfully installed scipy-1.5.2
 Requirement already satisfied: pandas in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (1.0.3)
+Requirement already satisfied: python-dateutil&gt;=2.6.1 in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (from pandas) (2.8.1)
 Requirement already satisfied: numpy&gt;=1.13.3 in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (from pandas) (1.18.4)
 Requirement already satisfied: pytz&gt;=2017.2 in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (from pandas) (2020.1)
-Requirement already satisfied: python-dateutil&gt;=2.6.1 in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (from pandas) (2.8.1)
 Requirement already satisfied: six&gt;=1.5 in /opt/hostedtoolcache/Python/3.8.5/x64/lib/python3.8/site-packages (from python-dateutil&gt;=2.6.1-&gt;pandas) (1.15.0)
 </pre>
 </div>
@@ -13216,16 +13212,16 @@ Requirement already satisfied: six&gt;=1.5 in /opt/hostedtoolcache/Python/3.8.5/
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>--2020-08-30 22:15:34--  https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv
-Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.208.133
-Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.208.133|:443... connected.
+<pre>--2020-08-30 22:18:58--  https://raw.githubusercontent.com/nytimes/covid-19-data/master/us-counties.csv
+Resolving raw.githubusercontent.com (raw.githubusercontent.com)... 151.101.248.133
+Connecting to raw.githubusercontent.com (raw.githubusercontent.com)|151.101.248.133|:443... connected.
 HTTP request sent, awaiting response... 200 OK
 Length: 19276189 (18M) [text/plain]
-Saving to: ‘us-counties.csv’
+Saving to: ‘us-counties.csv.1’
 
-us-counties.csv     100%[===================&gt;]  18.38M  31.7MB/s    in 0.6s    
+us-counties.csv.1   100%[===================&gt;]  18.38M  52.3MB/s    in 0.4s    
 
-2020-08-30 22:15:35 (31.7 MB/s) - ‘us-counties.csv’ saved [19276189/19276189]
+2020-08-30 22:18:59 (52.3 MB/s) - ‘us-counties.csv.1’ saved [19276189/19276189]
 
 </pre>
 </div>
