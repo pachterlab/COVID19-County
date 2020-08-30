@@ -1,0 +1,43 @@
+# This is a basic workflow to help you get started with Actions
+
+name: Make plot
+
+# Controls when the action will run. Triggers the workflow on push or pull request
+# events but only for the master branch
+on:
+  push:
+  repository_dispatch:
+  schedule:
+    - cron:  '*/5 * * * *'
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  build:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+      - uses: actions/checkout@v2
+        
+      - name: Setup python
+        uses: actions/setup-python@v2
+      
+      - name: Run notebook
+        # You may pin to the exact commit or the version.
+        # uses: yaananth/run-notebook@0c7f93ef82d068f6a4bd27213e227ba796476170
+        uses: yaananth/run-notebook@v1
+        with:
+          # Path to notebook with extension that should be executed
+          notebook: "LA_County_Triggers.ipynb"
+
+      - name: Commit and push if it changed
+        run: |-
+          git config user.name "Automated"
+          git config user.email "actions@users.noreply.github.com"
+          git add -A
+          timestamp=$(date -u)
+          git commit -m "Latest data: ${timestamp}" || exit 0
+          git push
