@@ -43,14 +43,14 @@ jobs:
       - name: Update README.md
         run: |-
           timestamp=$(date -u)
-          printf "# COVID-19 data from LA County\n![image](plots/graph.png)\n**Last Updated:** ${timestamp}" > README.md
+          printf "# COVID-19 data from LA County\n![image1](plots/graph.png)\n![image2](plots/classification.png)\n**Last Updated:** ${timestamp}" > README.md
       
       - name: Commit and push if it changed
         run: |-
           git config user.name "Automated"
           git config user.email "actions@users.noreply.github.com"
           git status
-          git add plots/graph.png requirements.txt README.md
+          git add plots/graph.png plots/classification.png requirements.txt README.md
           timestamp=$(date -u)
           git commit -m "Latest data: ${timestamp}" || exit 0
           git push
