@@ -8,7 +8,7 @@ on:
   push:
   repository_dispatch:
   schedule:
-    - cron:  '*/5 * * * *'
+    - cron:  '0 */4 * * *' # Runs every 4 hours
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -43,7 +43,7 @@ jobs:
       - name: Update README.md
         run: |-
           timestamp=$(date -u)
-          printf "# COVID-19 data from LA County\n![image](plots/graph.png)\nLast Updated: ${timestamp}" > README.md
+          printf "# COVID-19 data from LA County\n![image](plots/graph.png)\n**Last Updated:** ${timestamp}" > README.md
       
       - name: Commit and push if it changed
         run: |-
