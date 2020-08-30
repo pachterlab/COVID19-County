@@ -38,7 +38,7 @@ jobs:
           python -m pip install -r requirements.txt
           
       - name: Execute notebook
-        run: jupyter nbconvert --execute  LA_County_Triggers.ipynb
+        run: jupyter nbconvert --execute --to script LA_County_Triggers.ipynb
       
       - name: Commit and push if it changed
         run: |-
