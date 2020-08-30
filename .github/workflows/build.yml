@@ -38,11 +38,10 @@ jobs:
           python -m pip install -r requirements.txt
           
       - name: Execute notebook
-        run: python jupyter nbconvert --execute  LA_County_Triggers.ipynb
+        run: jupyter nbconvert --execute  LA_County_Triggers.ipynb
       
       - name: Commit and push if it changed
         run: |-
-          ls ./plots
           git config user.name "Automated"
           git config user.email "actions@users.noreply.github.com"
           git status
