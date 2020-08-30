@@ -45,7 +45,10 @@ jobs:
           git config user.name "Automated"
           git config user.email "actions@users.noreply.github.com"
           git status
-          git add -A
+          git add plots/graph.png requirements.txt
           timestamp=$(date -u)
           git commit -m "Latest data: ${timestamp}" || exit 0
           git push
+
+      - name: Clean up
+        run: rm us-counties.csv LA_County_Triggers.html
