@@ -35,6 +35,8 @@ jobs:
       
       - name: Commit and push if it changed
         run: |-
+          ls
+          pwd
           git config --global user.email "graph-bot@example.com"
           git config --global user.name "GRAPH-bot"
           git rm plots/graph.png
