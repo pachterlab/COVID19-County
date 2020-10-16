@@ -34,6 +34,7 @@ jobs:
             
       - name: Install Python dependencies
         run: |
+          python -m pip install wheel
           python -m pip install -r requirements.txt
           
       - name: Execute notebook
