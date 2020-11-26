@@ -6,6 +6,7 @@ name: Make plot
 # events but only for the master branch
 on:
   repository_dispatch:
+  push:
   schedule:
     - cron:  '0 */6 * * *' # Runs every 6 hours
 
