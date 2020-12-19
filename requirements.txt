@@ -16,6 +16,7 @@ Jinja2==2.11.2
 jsonschema==3.2.0
 jupyter==1.0.0
 jupyter-client==5.3.5
+jupyter-console==6.2.0
 jupyter-core==4.6.3
 kiwisolver==1.2.0
 MarkupSafe==1.1.1
@@ -32,6 +33,7 @@ parso==0.7.1
 pexpect==4.8.0
 pickleshare==0.7.5
 prometheus-client==0.8.0
+prompt-toolkit==3.0.8
 ptyprocess==0.6.0
 pycparser==2.20
 Pygments==2.6.1
